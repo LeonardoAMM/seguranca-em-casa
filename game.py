@@ -21,13 +21,13 @@ class Menu:
         pygame.init()
         self.screen = pygame.display.set_mode(RES)
         self.novojogo = pygame.image.load('imagens/Hud/novojogo.png')
-        self.novojogoBut = pygame.Rect(134,65,self.novojogo.get_width(),self.novojogo.get_height())
+        self.novojogoBut = pygame.Rect(134,80,self.novojogo.get_width(),self.novojogo.get_height())
         self.carregar = pygame.image.load('imagens/Hud/carregar.png')
         self.carregarBut = pygame.Rect(134,165,self.carregar.get_width(),self.carregar.get_height())
         self.pontuacoes = pygame.image.load('imagens/Hud/pontuacoes.png')
         self.direitos = pygame.image.load('imagens/Hud/menu.png')
         self.fasesb = pygame.image.load('imagens/Hud/fases.png')
-        self.fasesBut = pygame.Rect(5,140,self.fasesb.get_width(),self.fasesb.get_height())
+        self.fasesBut = pygame.Rect(3,150,self.fasesb.get_width(),self.fasesb.get_height())
         self.pontuacoesBut = pygame.Rect(134,130,self.pontuacoes.get_width(),self.pontuacoes.get_height())
         self.click = False
         self.fases = 0
@@ -95,8 +95,8 @@ class Menu:
     def draw(self):
         display.fill('black')
         display.blit(self.direitos,(0, 0))
-        display.blit(self.novojogo,(134,65))
-        display.blit(self.fasesb,(5,140))
+        display.blit(self.novojogo,(134,80))
+        display.blit(self.fasesb,(3,150))
         display.blit(self.pontuacoes,(134, 130))
 
     def run(self):
