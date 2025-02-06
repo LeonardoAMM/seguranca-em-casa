@@ -49,7 +49,7 @@ class Menu:
                 if self.novojogoBut.collidepoint((self.hm1, self.hm2)):
                     if self.click:
                         self.click = False
-                        game = Game(0,4*32,3*32)
+                        game = Game(0,4*32,3*32,0)
                         game.run()
 
                 if self.pontuacoesBut.collidepoint((self.hm1, self.hm2)):
@@ -77,9 +77,11 @@ class Menu:
                                         posx=int(item)
                                     if x == 2:
                                         posy=int(item)
+                                    if x == 3:
+                                        miss=int(item)
                                     x+=1
                             file.close()
-                            game = Game(mapa,posx,posy)
+                            game = Game(mapa,posx,posy,miss)
                             game.run()
                         except:
                             pass
@@ -115,7 +117,10 @@ class Fases:
         self.f3 = pygame.image.load('imagens/Hud/3.png')
         self.f3But = pygame.Rect(274,85,self.f3.get_width(),self.f3.get_height())
         self.direitos = pygame.image.load('imagens/Hud/menu.png')
+        self.voltar = pygame.image.load('imagens/Hud/voltar.png')
+        self.voltarBut = pygame.Rect(5,5,self.voltar.get_width(),self.voltar.get_height())
         self.click = False
+        self.rodando = True
         self.fases = 0
 
     def update(self):
@@ -135,21 +140,25 @@ class Fases:
                 if self.f1But.collidepoint((self.hm1, self.hm2)):
                     if self.click:
                         self.click = False
-                        game = Game(0,4*32,3*32)
+                        game = Game(0,4*32,3*32,0)
                         game.run()
 
                 if self.f2But.collidepoint((self.hm1, self.hm2)):
                     if self.click:
                         self.click = False
-                        game = Game(11,1*32,2*32)
+                        game = Game(11,1*32,2*32,1)
                         game.run()
 
                 if self.f3But.collidepoint((self.hm1, self.hm2)):
                     if self.click:
                         self.click = False
-                        game = Game(21,7*32,10*32)
+                        game = Game(21,7*32,10*32,2)
                         game.run()
 
+                if self.voltarBut.collidepoint((self.hm1, self.hm2)):
+                    if self.click:
+                        self.click = False
+                        self.rodando = False
 
 
                 self.click = False
@@ -161,12 +170,13 @@ class Fases:
     def draw(self):
         display.fill('black')
         display.blit(self.direitos,(0, 0))
+        display.blit(self.voltar, (5,5))
         display.blit(self.f1,(34,85))
         display.blit(self.f2,(154,85))
         display.blit(self.f3,(274, 85))
 
     def run(self):
-        while True:
+        while self.rodando:
             self.events()
             self.update()
             self.draw()
@@ -288,13 +298,14 @@ class Pontuacao:
 
 
 class Game:
-    def __init__(self, mapa, posx, posy):
+    def __init__(self, mapa, posx, posy, miss):
         pygame.init()
         self.clock = pygame.time.Clock()
         self.delta_time = 1
         self.posx = posx
         self.posy = posy
         self.novo()
+        self.hud.missao = miss
         self.screen = pygame.display.set_mode(RES)
         self.mapa = mapa
         self.player.setpos(posx/32,posy/32,32,0,0)
