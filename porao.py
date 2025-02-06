@@ -105,7 +105,12 @@ class Porao:
         for pos in mapa:
             if (player.x > (pos[0] * tamanho) -10) and (player.x < (pos[0] * tamanho) +22) and (player.y > (pos[1] * tamanho) - 16) and (player.y < (pos[1] * tamanho) +18):
                 if mapa[pos]==2:
-                    if eventos[0]==-1:
+                    if eventos[0]==8:
+                        eventos[0]=0
+                        self.maplayer2[pos]=3
+                        self.game.player.mao = 0
+                        self.game.player.event[0]=0
+                        self.andar=True
                         break
                     if eventos[0]==7:
                         self.andar=True
@@ -114,7 +119,7 @@ class Porao:
                     if eventos[0]==6:
                         eventos[0]=7
                     if eventos[0]==5:
-                        eventos[0]=-1
+                        eventos[0]=8
                         self.maplayer2[pos]=-1
                         self.game.player.mao = 3
                         self.game.player.event[0]=3

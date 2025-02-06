@@ -21,12 +21,14 @@ class Menu:
         pygame.init()
         self.screen = pygame.display.set_mode(RES)
         self.novojogo = pygame.image.load('imagens/Hud/novojogo.png')
-        self.novojogoBut = pygame.Rect(134,60,self.novojogo.get_width(),self.novojogo.get_height())
+        self.novojogoBut = pygame.Rect(134,65,self.novojogo.get_width(),self.novojogo.get_height())
         self.carregar = pygame.image.load('imagens/Hud/carregar.png')
         self.carregarBut = pygame.Rect(134,165,self.carregar.get_width(),self.carregar.get_height())
         self.pontuacoes = pygame.image.load('imagens/Hud/pontuacoes.png')
         self.direitos = pygame.image.load('imagens/Hud/menu.png')
-        self.pontuacoesBut = pygame.Rect(134,120,self.pontuacoes.get_width(),self.pontuacoes.get_height())
+        self.fasesb = pygame.image.load('imagens/Hud/fases.png')
+        self.fasesBut = pygame.Rect(5,140,self.fasesb.get_width(),self.fasesb.get_height())
+        self.pontuacoesBut = pygame.Rect(134,130,self.pontuacoes.get_width(),self.pontuacoes.get_height())
         self.click = False
         self.fases = 0
 
@@ -55,6 +57,12 @@ class Menu:
                         self.click = False
                         pontuacao = Pontuacao()
                         pontuacao.run()
+
+                if self.fasesBut.collidepoint((self.hm1, self.hm2)):
+                    if self.click:
+                        self.click = False
+                        fasese = Fases()
+                        fasese.run()
 
                 if self.carregarBut.collidepoint((self.hm1, self.hm2)):
                     if self.click:
@@ -85,14 +93,84 @@ class Menu:
     def draw(self):
         display.fill('black')
         display.blit(self.direitos,(0, 0))
-        display.blit(self.novojogo,(134,60))
-        display.blit(self.pontuacoes,(134, 120))
+        display.blit(self.novojogo,(134,65))
+        display.blit(self.fasesb,(5,140))
+        display.blit(self.pontuacoes,(134, 130))
 
     def run(self):
         while True:
             self.events()
             self.update()
             self.draw()
+
+
+class Fases:
+    def __init__(self):
+        pygame.init()
+        self.screen = pygame.display.set_mode(RES)
+        self.f1 = pygame.image.load('imagens/Hud/1.png')
+        self.f1But = pygame.Rect(34,85,self.f1.get_width(),self.f1.get_height())
+        self.f2 = pygame.image.load('imagens/Hud/2.png')
+        self.f2But = pygame.Rect(154,85,self.f2.get_width(),self.f2.get_height())
+        self.f3 = pygame.image.load('imagens/Hud/3.png')
+        self.f3But = pygame.Rect(274,85,self.f3.get_width(),self.f3.get_height())
+        self.direitos = pygame.image.load('imagens/Hud/menu.png')
+        self.click = False
+        self.fases = 0
+
+    def update(self):
+        pygame.display.update()
+        surf = pygame.transform.scale(display,RES)
+        self.screen.blit(surf,(0, 0))
+
+    def events(self):
+        for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+
+                self.m1, self.m2 = pygame.mouse.get_pos()
+                self.hm1 = int(self.m1/3.2)
+                self.hm2 = int(self.m2/3.6)
+                if self.f1But.collidepoint((self.hm1, self.hm2)):
+                    if self.click:
+                        self.click = False
+                        game = Game(0,4*32,3*32)
+                        game.run()
+
+                if self.f2But.collidepoint((self.hm1, self.hm2)):
+                    if self.click:
+                        self.click = False
+                        game = Game(11,1*32,2*32)
+                        game.run()
+
+                if self.f3But.collidepoint((self.hm1, self.hm2)):
+                    if self.click:
+                        self.click = False
+                        game = Game(21,7*32,10*32)
+                        game.run()
+
+
+
+                self.click = False
+
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    if event.button == 1:
+                        self.click = True
+
+    def draw(self):
+        display.fill('black')
+        display.blit(self.direitos,(0, 0))
+        display.blit(self.f1,(34,85))
+        display.blit(self.f2,(154,85))
+        display.blit(self.f3,(274, 85))
+
+    def run(self):
+        while True:
+            self.events()
+            self.update()
+            self.draw()
+
 
 
 class Pontuacao:

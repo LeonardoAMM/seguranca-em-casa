@@ -16,7 +16,8 @@ mesa = pygame.image.load('imagens/tileset/sala/Mesa.png')
 abajur = pygame.image.load('imagens/tileset/sala/Abajur.png')
 tut1 = pygame.image.load('imagens/Hud/Tut1.png')
 tut2 = pygame.image.load('imagens/Hud/Tut2.png')
-tut3 = pygame.image.load('imagens/Hud/Tut3.png')
+tut4 = pygame.image.load('imagens/Hud/Tut3.png')
+tut3 = pygame.image.load('imagens/Hud/Tut4.png')
 tamanho = teto.get_width()
 tamanhoT = teto.get_width()
 
@@ -136,7 +137,7 @@ class Tutorial:
 
     def change_event(self, player, mapa, eventos):
         for pos in mapa:
-            if (player.x > (pos[0] * tamanho) -15) and (player.x < (pos[0] * tamanho) +30) and (player.y > (pos[1] * tamanho) - 17) and (player.y < (pos[1] * tamanho) +22):
+            if (player.x > (pos[0] * tamanho) -25) and (player.x < (pos[0] * tamanho) +35) and (player.y > (pos[1] * tamanho) - 17) and (player.y < (pos[1] * tamanho) +22):
                 if mapa[pos]==1:
                     if self.game.player.event[0]==0:
                         if eventos[0]==-1:
@@ -193,9 +194,12 @@ class Tutorial:
                             self.game.player.mao = 0
                         if eventos[0]==0 or eventos[0]==1 or eventos[0]== -1:
                             eventos[0]=11
+            if eventos[1]==4:
+                eventos[1]=5
+                self.andar=True
+                break
             if eventos[1]==3:
                 eventos[1]=4
-                self.andar=True
                 break
             if eventos[1]==2:
                 eventos[1]=3
@@ -338,6 +342,9 @@ class Tutorial:
             if self.eventos[1]==3:
                 self.andar=False
                 self.dis.blit(tut3,(0, 0))
+            if self.eventos[1]==4:
+                self.andar=False
+                self.dis.blit(tut4,(0, 0))
                     #self.dis.blit(televisao,(pos[0] * tamanho-int(self.scrow[0]), pos[1] * tamanho-int(self.scrow[1])))
 
         if self.gameover[0]==1:

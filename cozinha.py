@@ -112,7 +112,12 @@ class Cozinha:
         for pos in mapa:
             if (player.x > (pos[0] * tamanho) -16) and (player.x < (pos[0] * tamanho) +32) and (player.y > (pos[1] * tamanho) - 36) and (player.y < (pos[1] * tamanho) +38):
                 if mapa[pos]==2:
-                    if eventos[0]==-1:
+                    if eventos[0]==8:
+                        eventos[0]=0
+                        self.maplayer2[pos]=6
+                        self.game.player.event[0]=0
+                        self.game.player.mao = 0
+                        self.andar=True
                         break
                     if eventos[0]==7:
                         self.andar=True
@@ -121,7 +126,7 @@ class Cozinha:
                     if eventos[0]==6:
                         eventos[0]=7
                     if eventos[0]==5:
-                        eventos[0]=-1
+                        eventos[0]=8
                         self.maplayer2[pos]=-1
                         self.game.player.event[0]=1
                         self.game.player.mao = 1
