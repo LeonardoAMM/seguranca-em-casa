@@ -160,7 +160,7 @@ class Minigame3:
         if self.cena == 1:
             self.posP = [270,110]
             self.player.mudar('luta','soco')
-            self.hud.draw('','Jin soca a cobra','')
+            self.hud.draw('','Leo soca a cobra','')
         if self.cena == 2:
             self.posC = [300,120]
             self.posP = [270,100]
@@ -173,21 +173,21 @@ class Minigame3:
         if self.cena == 4:
             self.posC = [300,110]
             self.cobra.mudar('ataque','parado')
-            self.hud.draw('','Jin foi envenado','')
+            self.hud.draw('','Leo foi envenado','')
             if self.tempo >= 82:
                 return 9
         if self.cena == 5:
             self.posP = [270,100]
             self.player.mudar('luta','voadora')
-            self.hud.draw('','Jin da uma voadora na cobra','')
+            self.hud.draw('','Leo da uma voadora na cobra','')
         if self.cena == 6:
             self.posP = [275,100]
             self.player.mudar('luta','vassoura')
-            self.hud.draw('','Jin tenta espantar a cobra com a vassoura','')
+            self.hud.draw('','Leo tenta espantar a cobra com a vassoura','')
         if self.cena == 7:
             self.posP = [70,100]
             self.player.mudar('luta','pedra')
-            self.hud.draw('','Jin ataca uma pedra na cobra','')
+            self.hud.draw('','Leo ataca uma pedra na cobra','')
         if self.cena == 8:
             self.posC = [300,120]
             self.player.mudar('soco','luta')
@@ -199,7 +199,7 @@ class Minigame3:
         if self.cena == 10:
             self.posC = [90,105]
             self.cobra.mudar('ataque','parado')
-            self.hud.draw('','Jin foi envenado','')
+            self.hud.draw('','Leo foi envenado','')
         if self.cena == 14:
             self.posC = [300,120]
             self.player.mudar('soco','luta')

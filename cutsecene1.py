@@ -226,11 +226,11 @@ class Cutsecene1:
 
         if self.eventos[0]==1:
             self.andar=False
-            self.game.hud.draw('Jin','Noooossa... mas que tédio!','')
+            self.game.hud.draw('Leo','Noooossa... mas que tédio!','')
             self.dis.blit(tut0,(0,0))
         if self.eventos[0]==2:
             self.andar=False
-            self.game.hud.draw('Jin','Está na hora da minha série preferida.','')
+            self.game.hud.draw('Leo','Está na hora da minha série preferida.','')
         if self.eventos[0]==4:
             self.andar=False
             self.game.hud.draw('comercial','Olha só, você sabia que equipamentos','eletrônicos são perigosos?')
@@ -239,14 +239,14 @@ class Cutsecene1:
             self.game.hud.draw('comercial','Caso eles peguem fogo, é só....','')
         if self.eventos[0]==6:
             self.andar=False
-            self.game.hud.draw('Jin','Esse comercial não acaba não?','')
+            self.game.hud.draw('Leo','Esse comercial não acaba não?','')
         if self.eventos[0]==7:
             self.andar=False
-            self.game.hud.draw('Jin','Quero ver a série, logo.','')
+            self.game.hud.draw('Leo','Quero ver a série, logo.','')
         if self.eventos[0]==9:
             self.andar=False
-            self.game.hud.draw('Jin','Eiiiita! A TV explodiu, doido!','')
+            self.game.hud.draw('Leo','Eiiiita! A TV explodiu, doido!','')
         if self.eventos[0]==10:
             self.andar=False
-            self.game.hud.draw('Jin','Tenho que apagar isso, antes que a casa inteira','pegue fogo.')
+            self.game.hud.draw('Leo','Tenho que apagar isso, antes que a casa inteira','pegue fogo.')
             

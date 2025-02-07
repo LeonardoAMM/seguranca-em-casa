@@ -200,16 +200,16 @@ class Cozinha:
 
         if self.eventos[0]==1:
             self.andar=False
-            self.game.hud.draw('Jin','Ué!!! Quem deixou esse balde de água','aqui na cozinha?')
+            self.game.hud.draw('Leo','Ué!!! Quem deixou esse balde de água','aqui na cozinha?')
         if self.eventos[0]==2:
             self.andar=False
-            self.game.hud.draw('Jin','Talvez ele possa me ajudar a apagar o fogo.','')
+            self.game.hud.draw('Leo','Talvez ele possa me ajudar a apagar o fogo.','')
         if self.eventos[0]==3:
             self.andar=False
-            self.game.hud.draw('Jin','Será que devo pegá-lo?','')
+            self.game.hud.draw('Leo','Será que devo pegá-lo?','')
         if self.eventos[0]==4:
             self.andar=False
-            self.game.hud.draw('Jin','Será que devo pegá-lo?','')
+            self.game.hud.draw('Leo','Será que devo pegá-lo?','')
             self.dis.blit(mouseop,(0,0))
             self.eventos[0] = self.game.hud.Escolha(4,5,0)
             
@@ -217,10 +217,10 @@ class Cozinha:
 
         if self.eventos[0]==5:
             self.andar=False
-            self.game.hud.draw('Jin','Beleza, vai ser isso mesmo.','')
+            self.game.hud.draw('Leo','Beleza, vai ser isso mesmo.','')
         if self.eventos[0]==7:
             self.andar=False
-            self.game.hud.draw('Jin','Já estou com as mãos ocupadas, não posso',' pegar o balde.')
+            self.game.hud.draw('Leo','Já estou com as mãos ocupadas, não posso',' pegar o balde.')
 
 
     def drawb(self):

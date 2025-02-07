@@ -286,51 +286,51 @@ class Tutorial:
 
             if self.eventos[0]==1:
                 self.andar=False
-                self.hud.draw('Jin','Tenho que apagar isso logo.','')
+                self.hud.draw('Leo','Tenho que apagar isso logo.','')
             if self.eventos[0]==2:
                 self.andar=False
-                self.hud.draw('Jin','Vamos ver se a água funciona.','')
+                self.hud.draw('Leo','Vamos ver se a água funciona.','')
             if self.eventos[0]==3:
                 self.andar=False
                 self.game.hud.escurecer(6)
-                self.hud.draw('Jin','Afinal água apaga o fogo né.','')
+                self.hud.draw('Leo','Afinal água apaga o fogo né.','')
             if self.eventos[0]==4:
                 self.andar=False
                 self.game.hud.escurecer(4)
-                self.hud.draw('Jin','AAAAAAAAA.','')
+                self.hud.draw('Leo','AAAAAAAAA.','')
             if self.eventos[0]==6:
                 self.andar=False
-                self.hud.draw('Jin','Eu não esperava que este extintor fosse realmente','ser usado.')
+                self.hud.draw('Leo','Eu não esperava que este extintor fosse realmente','ser usado.')
             if self.eventos[0]==7:
                 self.andar=False
-                self.hud.draw('Jin','ainda bem que peguei ele.','')
+                self.hud.draw('Leo','ainda bem que peguei ele.','')
             if self.eventos[0]==8:
                 self.andar=False
                 self.hud.escurecer(4)
-                self.hud.draw('Jin','agora vamos apagar logo esse fogo chato.','')
+                self.hud.draw('Leo','agora vamos apagar logo esse fogo chato.','')
             if self.eventos[0]==9:
                 self.andar=False
                 self.hud.escurecer(4)
-                self.hud.draw('Jin','ué?? não esta apagando nâo.','')
+                self.hud.draw('Leo','ué?? não esta apagando nâo.','')
             if self.eventos[0]==10:
                 self.andar=False
                 self.hud.escurecer(4)
-                self.hud.draw('Jin','Socooooorro.','')
+                self.hud.draw('Leo','Socooooorro.','')
 
             if self.eventos[0]==11:
                 self.andar=False
-                self.hud.draw('Jin','Confio que este extintor vai funcionar.','')
+                self.hud.draw('Leo','Confio que este extintor vai funcionar.','')
             if self.eventos[0]==12:
                 self.andar=False
-                self.hud.draw('Jin','Por isso vamos logo apagar esse fogo.','')
+                self.hud.draw('Leo','Por isso vamos logo apagar esse fogo.','')
             if self.eventos[0]==13:
                 self.andar=False
                 self.hud.escurecer(4)
-                self.hud.draw('Jin','agora só apagar logo esse fogo chato.','')
+                self.hud.draw('Leo','agora só apagar logo esse fogo chato.','')
             if self.eventos[0]==14:
                 self.andar=False
                 self.hud.escurecer(4)
-                self.hud.draw('Jin','Booa, consegui apagar.','')
+                self.hud.draw('Leo','Booa, consegui apagar.','')
                 
 
             if self.eventos[1]==1:

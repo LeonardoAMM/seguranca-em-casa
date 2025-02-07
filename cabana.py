@@ -262,56 +262,56 @@ class Cabana:
           
         if self.eventos[0]==1:
                 self.andar=False
-                self.hud.draw('Jin','Isso aqui é um óculos de proteção.','Posso usar para proteger meus olhos')
+                self.hud.draw('Leo','Isso aqui é um óculos de proteção.','Posso usar para proteger meus olhos')
         if self.eventos[0]==2:
                 self.andar=False
-                self.hud.draw('Jin','Será que devo colocar?','')
+                self.hud.draw('Leo','Será que devo colocar?','')
         if self.eventos[0]==3:
                 self.andar=False
-                self.hud.draw('Jin','Será que devo colocar?','')
+                self.hud.draw('Leo','Será que devo colocar?','')
                 self.eventos[0] = self.hud.Escolha(3,4,0)
         if self.eventos[0]==4:
                 self.andar=False
-                self.hud.draw('Jin','Pronto, agora estou protegido.','')
+                self.hud.draw('Leo','Pronto, agora estou protegido.','')
         if self.eventos[0]==6:
                 self.andar=False
-                self.hud.draw('Jin','Vou guardar os óculos de volta aqui','')
+                self.hud.draw('Leo','Vou guardar os óculos de volta aqui','')
 
         if self.eventos[1]==1:
                 self.andar=False
-                self.hud.draw('Jin','O cortador de grama é meio antigo.','')
+                self.hud.draw('Leo','O cortador de grama é meio antigo.','')
         if self.eventos[1]==2:
                 self.andar=False
-                self.hud.draw('Jin','Está um pouco enferrujado, mas acho que serve','para o trabalho.')
+                self.hud.draw('Leo','Está um pouco enferrujado, mas acho que serve','para o trabalho.')
         if self.eventos[1]==3:
                 self.andar=False
-                self.hud.draw('Jin','Será que devo usá-lo?','')
+                self.hud.draw('Leo','Será que devo usá-lo?','')
         if self.eventos[1]==4:
                 self.andar=False
-                self.hud.draw('Jin','Será que devo usá-lo?','')
+                self.hud.draw('Leo','Será que devo usá-lo?','')
                 self.eventos[1] = self.hud.Escolha(4,5,0)
         if self.eventos[1]==5:
                 self.andar=False
-                self.hud.draw('Jin','Bora cortar essa grama! Não posso esquecer de','trazê-lo de volta depois de usar.')
+                self.hud.draw('Leo','Bora cortar essa grama! Não posso esquecer de','trazê-lo de volta depois de usar.')
         if self.eventos[1]==7:
                 self.andar=False
-                self.hud.draw('Jin','Agora que terminei,','vou deixá-lo aqui.')
+                self.hud.draw('Leo','Agora que terminei,','vou deixá-lo aqui.')
         if self.eventos[1]==8:
                 self.andar=False
-                self.hud.draw('Jin','Não consigo pegar, já estou com a mão ocupada','')
+                self.hud.draw('Leo','Não consigo pegar, já estou com a mão ocupada','')
 
         if self.eventos[2]==1:
                 self.andar=False
-                self.hud.draw('Jin','Essa dispensa está bem suja, hein!','')
+                self.hud.draw('Leo','Essa dispensa está bem suja, hein!','')
         if self.eventos[2]==2:
                 self.andar=False
-                self.hud.draw('Jin','E muito desorganizada. Nossa!! Parece um labirinto','com todas essas caixas!')
+                self.hud.draw('Leo','E muito desorganizada. Nossa!! Parece um labirinto','com todas essas caixas!')
         if self.eventos[2]==3:
                 self.andar=False
-                self.hud.draw('Jin','Essa luz está piscando muito.','mal consigo ver o caminho...')
+                self.hud.draw('Leo','Essa luz está piscando muito.','mal consigo ver o caminho...')
         if self.eventos[2]==4:
                 self.andar=False
-                self.hud.draw('Jin','Tenho que procurar o cortador de grama','e os óculos de proteção que estão por aqui.')
+                self.hud.draw('Leo','Tenho que procurar o cortador de grama','e os óculos de proteção que estão por aqui.')
 
 
     def drawb(self):

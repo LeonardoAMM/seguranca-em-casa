@@ -187,24 +187,24 @@ class Corredor:
         for pos in self.maplayer2:
             if self.eventos[0]==1:
                 self.andar=False
-                self.game.hud.draw('Jin','Ufa! Ainda bem que tenho um extintor','aqui em casa.')
+                self.game.hud.draw('Leo','Ufa! Ainda bem que tenho um extintor','aqui em casa.')
             if self.eventos[0]==2:
                 self.andar=False
-                self.game.hud.draw('Jin','O rótulo diz que é de espuma mecânica.','')
+                self.game.hud.draw('Leo','O rótulo diz que é de espuma mecânica.','')
             if self.eventos[0]==3:
                 self.andar=False
-                self.game.hud.draw('Jin','Será que devo usá-lo?','')
+                self.game.hud.draw('Leo','Será que devo usá-lo?','')
             if self.eventos[0]==4:
                 self.andar=False
-                self.game.hud.draw('Jin','Será que devo usá-lo?','')
+                self.game.hud.draw('Leo','Será que devo usá-lo?','')
                 self.dis.blit(mouseop,(0,0))
                 self.eventos[0] = self.game.hud.Escolha(4,5,0)
             if self.eventos[0]==5:
                 self.andar=False
-                self.game.hud.draw('Jin','Beleza, é melhor voltar correndo para lá.','')
+                self.game.hud.draw('Leo','Beleza, é melhor voltar correndo para lá.','')
             if self.eventos[0]==7:
                 self.andar=False
-                self.game.hud.draw('Jin','Já estou com a mão ocupada,','não posso pegar esse extintor.')
+                self.game.hud.draw('Leo','Já estou com a mão ocupada,','não posso pegar esse extintor.')
             #pygame.draw.rect(dis, 'darkgray', (pos[0] * tamanho, pos[1] * tamanho, tamanho, tamanho), 1)
     def drawb(self):
         for pos in self.maplayer2:
