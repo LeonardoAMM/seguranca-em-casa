@@ -181,9 +181,9 @@ class Fora:
                             self.andar=False
                             #self.game.muda()
                             self.gameover[0]=1
-                            self.gameover[3]="Até mesmo em simples tarefas é importante o uso de"
-                            self.gameover[4]="Equipamentos para a segurança individual, neste"
-                            self.gameover[5]="caso seria os oculos de segurança."
+                            self.gameover[3]="Até mesmo em tarefas simples é importante usar os"
+                            self.gameover[4]="equipamentos de proteção individual. Neste"
+                            self.gameover[5]="caso devo usar os óculos de proteção."
                             
                         if eventos[0]==7:
                             eventos[0]=-1
@@ -216,7 +216,7 @@ class Fora:
                         if eventos[1]==9:
                             self.gameover[0]=1
                             self.gameover[3]="Atacar uma cobra é algo muito arriscado de se"
-                            self.gameover[4]="fazer, pois elas podem ser extremamente venenosas."
+                            self.gameover[4]="fazer, pois elas podem ser peçonhentas."
                             self.gameover[5]=""
                         if eventos[1]==5 or eventos[1]==7:
                             eventos[1]=-1
@@ -387,73 +387,73 @@ class Fora:
 
             if self.eventos[0]==1:
                     self.andar=False
-                    self.hud.draw('Jin','A grama está alta né.','')
+                    self.hud.draw('Jin','A grama está alta, né?','')
             if self.eventos[0]==2:
                     self.andar=False
-                    self.hud.draw('Jin','Mas não tenho nada para cortar ela ainda não.','')
+                    self.hud.draw('Jin','Mas, para isso, preciso encontrar o cortador de grama.','')
             if self.eventos[0]==3:
                     self.andar=False
-                    self.hud.draw('Jin','Como estou com o cortador, bora cortar',' essa grama.')
+                    self.hud.draw('Jin','Já estou com o cortador na mão, bora cortar',' essa grama!')
             if self.eventos[0]==4:
                     self.andar=False
-                    self.hud.draw('','Agora irá começar um minigame, nesse',' minigame você terá que desviar')
+                    self.hud.draw('','Vamos jogar um minigame.','Nele, você terá que desviar')
             if self.eventos[0]==5:
                     self.andar=False
-                    self.hud.draw('','Das pedras que estão no chão, para não quebrar',' o cortador de grama.')
+                    self.hud.draw('','das pedras que estão no chão, para não quebrar',' o cortador de grama.')
             if self.eventos[0]==7:
                     self.andar=False
-                    self.hud.draw('Jin','Grama cortada com sucesso.','')
+                    self.hud.draw('Jin','Grama cortada com sucesso!','')
             if self.eventos[0]==8:
                     self.andar=False
                     self.hud.escurecer(6)
-                    self.hud.draw('Jin','AAAAAAAAAA meu olho.','')
+                    self.hud.draw('Jin','AAAAAAHHH!! Meu olho.','Deveria ter usado o óculos de proteção')
             
             if self.eventos[1]==1:
                     self.andar=False
-                    self.hud.draw('Jin','aaaa uma cobra.','')
+                    self.hud.draw('Jin','Que susto! Uma cobra.','')
             if self.eventos[1]==3:
                     self.andar=False
-                    self.hud.draw('Jin','Eu vou ligar para os bombeiros.','')
+                    self.hud.draw('Jin','Vou ligar para os bombeiros.','')
             if self.eventos[1]==4:
                     self.andar=False
                     self.hud.escurecer(6)
-                    self.hud.draw('','Um tempo depois.','')
+                    self.hud.draw('','Um tempo depois...','')
             if self.eventos[1]==5:
                     self.andar=False
                     self.hud.clarear(6)
                     self.hud.draw('Jin','Ainda bem que chamei os bombeiros.','')
             if self.eventos[1]==5:
                     self.andar=False
-                    self.hud.draw('Jin','E pensar que apareceria uma cobra no meu quintal.','')
+                    self.hud.draw('Jin','E pensar que poderia aparecer uma','cobra no meu quintal...')
 
             if self.eventos[1]==7:
                     self.andar=False
-                    self.hud.draw('Jin','Pronto, consegui espantar essa cobra dai.','')
+                    self.hud.draw('Jin','Pronto! Consegui espantar a cobra.','')
 
             if self.eventos[1]==9:
                     self.andar=False
-                    self.hud.draw('Jin','Eu não to me sintindo muito bem.','')
+                    self.hud.draw('Jin','Não estou me sintindo muito bem...','')
 
             if self.eventos[2]==1:
                     self.andar=False
-                    self.hud.draw('Jin','Aquele frango que fiz estava muito bom.','')
+                    self.hud.draw('Jin','Aquele frango que preparei estava uma delícia.','')
                     self.game.player.mao=0
             if self.eventos[2]==2:
                     self.andar=False
-                    self.hud.draw('Jin','E isso me deu motivação para fazer as minhas','tarefas de casa.')
+                    self.hud.draw('Jin','E isso até me motivou a cortar a grama.', '')
             if self.eventos[2]==3:
                     self.andar=False
-                    self.hud.draw('Jin','Que é cortar a grama com o cortador, assim como','pegar os óculos de segurança lá na dispensa.')
+                    self.hud.draw('Jin','Antes disso,devo pegar o cortador e os óculos de','proteção na dispensa.')
             if self.eventos[2]==4:
                     self.andar=False
-                    self.hud.draw('Jin','E logo depois disso, tomar um banho relaxante','de piscina.')
+                    self.hud.draw('Jin','E quando terminar tomarei um banho relaxante','de piscina.')
             if self.eventos[2]==5:
                     self.andar=False
-                    self.hud.draw('Jin','Bora trabalhar agora.','')
+                    self.hud.draw('Jin','Bora trabalhar!','')
 
             if self.eventos[3]==1:
                     self.andar=False
-                    self.hud.draw('Jin','Eu ainda tenho que cortar a grama.','')
+                    self.hud.draw('Jin','Ainda tenho que cortar a grama.','')
 
                 #self.minigame.mini1()
 

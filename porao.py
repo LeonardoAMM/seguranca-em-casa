@@ -185,24 +185,24 @@ class Porao:
         for pos in self.maplayer2:
             if self.eventos[0]==1:
                 self.andar=False
-                self.game.hud.draw('Jin','Caramba, eu tenho um extintor nesse local','esquecido?')
+                self.game.hud.draw('Jin','Caramba! Nem lembrava de ter um outro extintor','aqui.')
             if self.eventos[0]==2:
                 self.andar=False
-                self.game.hud.draw('Jin','Nele esta escrito alguma coisa sobre ser','de CO2.')
+                self.game.hud.draw('Jin','O rótulo diz que o extintor é de CO2.','')
             if self.eventos[0]==3:
                 self.andar=False
-                self.game.hud.draw('Jin','Será que pego ele?','')
+                self.game.hud.draw('Jin','Será que devo pegá-lo?','')
             if self.eventos[0]==4:
                 self.andar=False
-                self.game.hud.draw('Jin','Será que pego ele?','')
+                self.game.hud.draw('Jin','Será que devo pegá-lo?','')
                 self.dis.blit(mouseop,(0,0))
                 self.eventos[0] = self.game.hud.Escolha(4,5,0)
             if self.eventos[0]==5:
                 self.andar=False
-                self.game.hud.draw('Jin','Beleza, é melhor voltar para lá rapido antes que','a minha casa queime.')
+                self.game.hud.draw('Jin','Beleza! É melhor voltar para lá, antes que o fogo',' se espalhe pela casa toda.')
             if self.eventos[0]==7:
                 self.andar=False
-                self.game.hud.draw('Jin','Já tenho algo para apagar o fogo, não preciso desse','extintor.')
+                self.game.hud.draw('Jin','Minhas mãos estão ocupadas,','não posso pegar esse extintor.')
             #pygame.draw.rect(dis, 'darkgray', (pos[0] * tamanho, pos[1] * tamanho, tamanho, tamanho), 1)
 
     def drawb(self):

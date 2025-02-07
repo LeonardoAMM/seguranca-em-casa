@@ -373,8 +373,8 @@ class CozinhaF1:
                             #self.game.muda()
                             self.gameover[0]=1
                             self.gameover[0]=1
-                            self.gameover[3]="Caso de algum cheiro estranho na cozinha,"
-                            self.gameover[4]="verifique-se se á algum vazamento de gás."
+                            self.gameover[3]="Em caso de cheiro estranho na cozinha,"
+                            self.gameover[4]="verifique se há algum vazamento de gás."
                             self.gameover[5]=""
                         if eventos[6]==11:
                             eventos[6]=12
@@ -411,8 +411,8 @@ class CozinhaF1:
                     if eventos[5]==1:
                         #self.game.muda()
                         self.gameover[0]=1
-                        self.gameover[3]="Em ambiente de cozinha ou lugares onde se usa"
-                        self.gameover[4]="Ferramentas afiadas, não se pode ter piso molhado"
+                        self.gameover[3]="Em cozinha ou ambientes onde se usa ferramentas "
+                        self.gameover[4]="afiadas, não se pode deixar o piso molhado"
                         self.gameover[5]="para não ocorrer acidentes."
                 if mapa[pos]==7 and self.mao == 8:
                     if eventos[5]==3:
@@ -428,9 +428,9 @@ class CozinhaF1:
         if eventos[7]>3 and eventos[7]<10:
             #self.game.muda()
             self.gameover[0]=1
-            self.gameover[3]="O ensopado é feito de batata, cenoura e frango"
-            self.gameover[4]="Cortados. Dica: (não esqueça de ver se o frango"
-            self.gameover[5]="ta na validade)"
+            self.gameover[3]="É importante verificar sempre a validade dos alimentos."
+            self.gameover[4]="Alimentos fora da validade podem causar intoxicação"
+            self.gameover[5]="Dica: verifique a validade do frango, usando o calendário."
         if eventos[7]==3:
             self.pontos += 275
             self.pontos += self.contar(self.errados)
@@ -590,153 +590,153 @@ class CozinhaF1:
 
                 if self.eventos[0]==1:
                     self.andar=False
-                    self.hud.draw('Jin','Deixa eu ver o que tem na geladeira.','')
+                    self.hud.draw('Jin','Deixa eu ver o que tem na geladeira...','')
                 if self.eventos[0]==2:
                     self.andar=False
                     self.hud.draw('Jin','Caramba, esqueci que tinha essa comida estragada','aqui na quentinha.')
                 if self.eventos[0]==4:
                     self.andar=False
-                    self.hud.draw('Jin','Consegui achar oque eu queria.','')
+                    self.hud.draw('Jin','Consegui achar o que eu queria.','')
                 if self.eventos[0]==5:
                     self.andar=False
-                    self.hud.draw('Jin','Vou é fechar a geladeira.','')
+                    self.hud.draw('Jin','Posso fechar a geladeira.','')
                 if self.eventos[0]==6:
                     self.andar=False
                     self.hud.draw('Jin','Agora não tem aquela quentinha estragada aqui.','')
                 if self.eventos[0]==10:
                     self.andar=False
-                    self.hud.draw('Jin','Eu não consigo abrir a geladeira com as mãos','ocupadas.')
+                    self.hud.draw('Jin','Eu não consigo abrir a geladeira com','as mãos ocupadas.')
 
                 if self.eventos[1]==1:
                     self.andar=False
-                    self.hud.draw('','Vai querer jogar esse item fora?','')
+                    self.hud.draw('','Devo jogar esse item no lixo?','')
                 if self.eventos[1]==2:
                     self.andar=False
-                    self.hud.draw('','Vai querer jogar esse item fora?','')
+                    self.hud.draw('','Devo jogar esse item no lixo?','')
                     self.eventos[1] = self.hud.Escolha(2,3,0)
                 if self.eventos[1]==3:
                     self.andar=False
                     if self.mao==0:
-                        self.hud.draw('Jin','Tenho nada na mão para jogar fora.','')
+                        self.hud.draw('Jin','Tenho nada na mão para jogar no lixo.','')
                     else:
-                        self.hud.draw('Jin','Pronto, foi jogado fora.','')
+                        self.hud.draw('Jin','Pronto, já está no lixo.','')
                 if self.eventos[1]==5:
                     self.andar=False
-                    self.hud.draw('Jin','Não posso jogar este item fora.','')
+                    self.hud.draw('Jin','Não posso jogar este item no lixo.','')
 
                 if self.eventos[2]==1:
                     self.andar=False
-                    self.hud.draw('Jin','Essa dai é uma tábua de cortar alimentos.','')
+                    self.hud.draw('Jin','Essa é a tábua de cortar alimentos.','')
                 if self.eventos[2]==2:
                     self.andar=False
-                    self.hud.draw('Jin','Mas como é que eu corto algo sem a faca??','')
+                    self.hud.draw('Jin','Mas como é que eu corto algo sem a faca?','')
                 if self.eventos[2]==4:
                     self.andar=False
-                    self.hud.draw('Jin','Agora só botar a faca aqui e pegar as coisas','para cortar.')
+                    self.hud.draw('Jin','Agora, é só botar a faca aqui e pegar','as coisas para cortar.')
                 if self.eventos[2]==6:
                     self.andar=False
-                    self.hud.draw('Jin','Não tenho nada para cortar não.','')
+                    self.hud.draw('Jin','Não tenho nada para cortar.','')
                 if self.eventos[2]==8:
                     self.andar=False
-                    self.hud.draw('Jin','Bora cortar essa comida.','')
+                    self.hud.draw('Jin','Bora cortar esse frango.','')
                 if self.eventos[2]==10:
                     self.andar=False
-                    self.hud.draw('Jin','Pronto, consegui cortar tudo.','')
+                    self.hud.draw('Jin','Pronto, consegui cortar tudo!','')
 
                 if self.eventos[3]==1:
                     self.andar=False
                     self.hud.draw('Jin','Essa daqui é a gavetas dos talheres.','')
                 if self.eventos[3]==2:
                     self.andar=False
-                    self.hud.draw('Jin','Será que eu pego uma faca?','')
+                    self.hud.draw('Jin','Devo pegar uma faca?','')
                 if self.eventos[3]==3:
                     self.andar=False
-                    self.hud.draw('Jin','Será que eu pego uma faca?','')
+                    self.hud.draw('Jin','Devo pegar uma faca?','')
                     self.eventos[3] = self.hud.Escolha(3,4,0)
                 if self.eventos[3]==4:
                     self.andar=False
-                    self.hud.draw('Jin','Agora é hora de cortar.','')
+                    self.hud.draw('Jin','Agora é hora de cortar!','')
                 if self.eventos[3]==6:
                     self.andar=False
-                    self.hud.draw('Jin','Eu já peguei o que preciso.','')
+                    self.hud.draw('Jin','Já peguei o que preciso.','')
                 if self.eventos[3]==8:
                     self.andar=False
-                    self.hud.draw('Jin','Eu já peguei o que preciso.','')
+                    self.hud.draw('Jin','Já peguei o que preciso.','')
                 if self.eventos[3]==9:
                     self.andar=False
                     self.hud.draw('Jin','Mudei de ideia, vou guardar essa faca.','')
                 if self.eventos[3]==10:
                     self.andar=False
-                    self.hud.draw('Jin','Eu não consigo abrir o armário com as mãos','ocupadas.')
+                    self.hud.draw('Jin','Eu não consigo abrir o armário com','as mãos ocupadas.')
 
                 if self.eventos[4]==1:
                     self.andar=False
-                    self.hud.draw('Jin','Aqui é onde guardo os produtos de','limpeza.')
+                    self.hud.draw('Jin','Aqui é o armário dos produtos de limpeza.','')
                 if self.eventos[4]==2:
                     self.andar=False
-                    self.hud.draw('Jin','Será que eu pego algum?','')
+                    self.hud.draw('Jin','Devo pegar algum?','')
                 if self.eventos[4]==3:
                     self.andar=False
-                    self.hud.draw('Jin','Será que eu pego algum?','')
+                    self.hud.draw('Jin','Devo pegar algum?','')
                     self.eventos[4] = self.hud.Escolha(3,4,0)
                 if self.eventos[4]==4:
                     self.andar=False
-                    self.hud.draw('Jin','Vamos limpar isso com um pano e produtos.','')
+                    self.hud.draw('Jin','Vamos limpar isso com um pano e','produto de limpeza.')
                 if self.eventos[4]==8:
                     self.andar=False
-                    self.hud.draw('Jin','Eu ja peguei o que preciso.','')
+                    self.hud.draw('Jin','Já peguei o que preciso.','')
                 if self.eventos[4]==9:
                     self.andar=False
-                    self.hud.draw('Jin','Aonde é que eles estavam mesmo?','')
+                    self.hud.draw('Jin','Onde é que eles estavam mesmo?','')
                 if self.eventos[4]==10:
                     self.andar=False
-                    self.hud.draw('Jin','Eu não consigo abrir o armário com as mãos','ocupadas.')
+                    self.hud.draw('Jin','Não consigo abrir o armário com','as mãos ocupadas.')
 
                 if self.eventos[5]==2:
                     self.andar=False
-                    self.hud.draw('Jin','Bora secar isso daqui.','')
+                    self.hud.draw('Jin','Bora secar essa poça!','')
                 if self.eventos[5]==3:
                     self.andar=False
-                    self.hud.draw('Jin','Pronto, agora não tenho chance de escorregar.','')
+                    self.hud.draw('Jin','Pronto, agora não corro risco de escorregar.','')
                 
                 if self.eventos[9]==1:
                     self.andar=False
-                    self.hud.draw('Jin','Aqui aonde eu lavos as coisas.','')
+                    self.hud.draw('Jin','Essa pia é bem grande!','')
                 if self.eventos[9]==2:
                     self.andar=False
-                    self.hud.draw('Jin','Lavo esse item daqui?','')
+                    self.hud.draw('Jin','Devo lavar esse item?','')
                     self.eventos[9] = self.hud.Escolha(2,3,0)
                 if self.eventos[9]==3:
                     self.andar=False
-                    self.hud.draw('Jin','Este belo item foi lavado com sucesso.','')
+                    self.hud.draw('Jin','Pronto! Está lavado','')
                 if self.eventos[9]==5:
                     self.andar=False
-                    self.hud.draw('Jin','Mas tenho nada na mão para lavar não.','')
+                    self.hud.draw('Jin','Não tenho nada na mão para lavar.','')
 
                     
                 
                 if self.eventos[8]==1:
                     self.andar=False
-                    self.hud.draw('Jin','Hmmmmm uma vontade de comer frango cozido.','')
+                    self.hud.draw('Jin','Hummmm!!! Bateu uma vontade de comer','frango cozido.')
                 if self.eventos[8]==2:
                     self.andar=False
-                    self.hud.draw('Jin','Eu sei que a minha televisão queimou, mas isso','não impede a minha fome.')
+                    self.hud.draw('Jin','Toda essa correria para apagar o fogo me fez ','ficar com fome.')
                 if self.eventos[8]==3:
                     self.andar=False
-                    self.hud.draw('Jin','Fazer o frango é bem simples, só cortar o frango,','e colocar na panela com água fervendo.')
+                    self.hud.draw('Jin','Fazer o frango cozido é bem simples. É só cortá-lo,','e colocá-lo na panela com água fervendo.')
                 if self.eventos[8]==4:
                     self.andar=False
-                    self.hud.draw('Jin','Coisa mais simples que isso não tem.','')
+                    self.hud.draw('Jin','Coisa mais simples que isso não há!','')
                 if self.eventos[8]==4:
                     self.andar=False
-                    self.hud.draw('Jin','dá para devolver os itens da minha mão','ao local aonde eu peguei.')
+                    self.hud.draw('Jin','Posso devolver os itens que eu pegar ao local ','onde estavam.')
                 if self.eventos[8]==5:
                     self.andar=False
-                    self.hud.draw('Jin','Aliás, tem um barulho e cheiro estranho','vindo do fogão.')
+                    self.hud.draw('Jin','Estou ouvindo um barulho e sentindo um cheiro','estranho vindo do fogão.')
 
                 if self.eventos[10]==1:
                     self.andar=False
-                    self.hud.draw('Jin','Me lembro de ter comprado este calendario em','uma feira.')
+                    self.hud.draw('Jin','Me lembro de ter comprado este calendario em','uma feira...')
                 if self.eventos[10]==2:
                     self.andar=False
                     self.hud.draw('Jin','Deixa eu ver que dia é hoje.','')
@@ -774,32 +774,32 @@ class CozinhaF1:
 
                     if self.eventos[6]==1:
                         self.andar=False
-                        self.hud.draw('Jin','Eu só tenho que colocar os ingredientes na','panela')
+                        self.hud.draw('Jin','Eu só tenho que colocar os ingredientes','na panela')
                         self.hud.drawFo()
                     if self.eventos[6]==2:
                         self.andar=False
-                        self.hud.draw('Jin','Mas não tenho nada para botar.','')
+                        self.hud.draw('Jin','Mas não tenho nada para colocar.','')
                         self.hud.drawFo()
                     if self.eventos[6]==3:
                         self.andar=False
-                        self.hud.draw('Jin','Será que coloco este item na panela?.','')
+                        self.hud.draw('Jin','Devo colocar esse item na panela?.','')
                         self.hud.drawFo()
                     if self.eventos[6]==4:
                         self.andar=False
-                        self.hud.draw('Jin','Será que coloco este item na panela?.','')
+                        self.hud.draw('Jin','Devo colocar esse item na panela?.','')
                         self.hud.drawFo()
                         self.eventos[6] = self.hud.Escolha(4,5,0)
                     if self.eventos[6]==5:
                         self.andar=False
-                        self.hud.draw('Jin','Tomara que esse ensopado fique bom.','')
+                        self.hud.draw('Jin','Tomara que esse frango cozido fique bom.','')
                         self.hud.drawFo()
                     if self.eventos[6]==6:
                         self.andar=False
-                        self.hud.draw('Jin','Esse fogão ta sujo hein.','')
+                        self.hud.draw('Jin','Esse fogão tá sujo, hein!','')
                         self.hud.drawFo()
                     if self.eventos[6]==7:
                         self.andar=False
-                        self.hud.draw('Jin','Deixa eu limpar ele.','')
+                        self.hud.draw('Jin','Deixa eu limpá-lo.','')
                         self.hud.drawFo()
                     if self.eventos[6]==8:
                         self.andar=False
@@ -808,11 +808,11 @@ class CozinhaF1:
 
                     if self.eventos[6]==9:
                         self.andar=False
-                        self.hud.draw('','Você quer ascender o fogo?','')
+                        self.hud.draw('','Você quer acender o fogo?','')
                         self.hud.drawFo()
                     if self.eventos[6]==10:
                         self.andar=False
-                        self.hud.draw('','Você quer ascender o fogo?','')
+                        self.hud.draw('','Você quer acender o fogo?','')
                         self.hud.drawFo()
                         if self.fogao == 1:
                             self.eventos[6] = self.hud.Escolha(10,11,0)
@@ -822,54 +822,54 @@ class CozinhaF1:
                         self.andar=False
                         self.hud.drawFo()
                         self.hud.escurecer(4)
-                        self.hud.draw('Jin','Bora ligar esse fogão','')
+                        self.hud.draw('Jin','Bora acender esse fogo','')
                     if self.eventos[6]==12:
                         self.andar=False
                         self.hud.drawFo()
                         self.hud.escurecer(4)
-                        self.hud.draw('Jin','AAAAAAAAAAAA','')
+                        self.hud.draw('Jin','AAAAAAHHHHHH!!!','')
                     if self.eventos[6]==13:
                         self.andar=False
                         self.hud.drawFo()
                         self.hud.escurecer(4)
-                        self.hud.draw('Jin','Terminei de cozinhar o frango cozido.','')
+                        self.hud.draw('Jin','Terminei de cozinhar o frango.','')
                     if self.eventos[6]==20:
                         self.andar=False
-                        self.hud.draw('Jin','Mas estou sentindo um cheiro estranho aqui','no fogão.')
+                        self.hud.draw('Jin','Estou sentindo um cheiro estranho aqui','no fogão.')
                         self.hud.drawFo()
                     if self.eventos[6]==21:
                         self.andar=False
-                        self.hud.draw('Jin','Sabia, alguem esqueceu a boca de gás aberta.','Ufa ainda bem que não ascendi o fogo.')
+                        self.hud.draw('Jin','Sabia! Alguém esqueceu a boca de gás aberta.','Ufa!!! Ainda bem que não acendi o fogo.')
                         self.hud.drawFo()
                     if self.eventos[6]==22:
                         self.andar=False
-                        self.hud.draw('Jin','Agora só esperar o gás sair e volto a cozinhar','a comida depois.')
+                        self.hud.draw('Jin','Agora é só esperar o gás sair e volto a cozinhar','o frango depois.')
                         self.hud.drawFo()
                     if self.eventos[6]==23:
                         self.andar=False
                         self.hud.drawFo()
                         self.hud.escurecer(4)
-                        self.hud.draw('','Algum tempo depois.','')
+                        self.hud.draw('','Algum tempo depois...','')
                     if self.eventos[6]==24:
                         self.andar=False
                         self.hud.drawFo()
                         self.hud.clarear(4)
-                        self.hud.draw('','vamos voltar fazer a comida.','')
+                        self.hud.draw('','Vamos voltar a fazer a comida.','')
                         
 
 
                     if self.eventos[7]==2:
                         self.andar=False
                         self.hud.escurecer(5)
-                        self.hud.draw('Jin','Agora frango esta feito, bora','comer.')
+                        self.hud.draw('Jin','Agora o frango está feito,','bora comer!')
                     if self.eventos[7]==3:
                         self.andar=False
                         self.hud.escurecer(5)
-                        self.hud.draw('Jin','Hmmmm tá com um gosto tão bom.','')
+                        self.hud.draw('Jin','Huummmm! Tá muito gostoso...','')
                     if self.eventos[7]==4:
                         self.andar=False
                         self.hud.escurecer(5)
-                        self.hud.draw('Jin','Puts esqueci de cortar as coisas, nem dá','pra comer.')
+                        self.hud.draw('Jin','Puts! Esqueci de cortar o frango,','assim não dá!')
                     if self.eventos[7]==5:
                         self.andar=False
                         self.hud.escurecer(5)
@@ -877,7 +877,7 @@ class CozinhaF1:
                     if self.eventos[7]==6:
                         self.andar=False
                         self.hud.escurecer(5)
-                        self.hud.draw('Jin','Pera, tem uma FACA aqui no frango','')
+                        self.hud.draw('Jin','Caramba! Tem uma FACA aqui no frango','')
 
         if self.gameover[0]==1:
             self.gameover[1].menuD(self.gameover[3],self.gameover[4],self.gameover[5])  

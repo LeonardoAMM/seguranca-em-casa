@@ -362,92 +362,92 @@ class Piscina:
 
             if self.eventos[0]==1:
                     self.andar=False
-                    self.hud.draw('Jin','Comprei essa rede de piscina faz pouco tempo.','')
+                    self.hud.draw('Jin','Comprei essa rede para limpar a piscina','há pouco tempo.')
             if self.eventos[0]==2:
                     self.andar=False
-                    self.hud.draw('Jin','Só não tive a chance de usar ela ainda.','')
+                    self.hud.draw('Jin','E ainda não tive a chance de usá-la.','')
             if self.eventos[0]==3:
                     self.andar=False
-                    self.hud.draw('Jin','Será que pego ela?','')
+                    self.hud.draw('Jin','Devo usá-la?','')
             if self.eventos[0]==4:
                     self.andar=False
-                    self.hud.draw('Jin','Será que pego ela?','')
+                    self.hud.draw('Jin','Devo usá-la?','')
                     self.eventos[0] = self.hud.Escolha(4,5,0)
             if self.eventos[0]==5:
                     self.andar=False
-                    self.hud.draw('Jin','Hora de limpar essa piscina.','')
+                    self.hud.draw('Jin','Hora de limpar a piscina.','')
             if self.eventos[0]==7:
                     self.andar=False
-                    self.hud.draw('Jin','Vou guardar ela de volta para aqui.','')
+                    self.hud.draw('Jin','Vou guardá-la de volta aqui.','')
             if self.eventos[0]==8:
                     self.andar=False
-                    self.hud.draw('Jin','Eu já estou com algo na mão.','')
+                    self.hud.draw('Jin','Já estou com a mão ocupada.','')
 
             if self.eventos[1]==1:
                     self.andar=False
-                    self.hud.draw('Jin','Isso daqui é um balde de agua com','cloro diluído.')
+                    self.hud.draw('Jin','Isso aqui é um balde de água com','cloro diluído.')
             if self.eventos[1]==2:
                     self.andar=False
-                    self.hud.draw('Jin','Eu deixei ele pronto para jogar','na piscina depois.')
+                    self.hud.draw('Jin','Eu o deixei pronto para jogar','na piscina.')
             if self.eventos[1]==3:
                     self.andar=False
-                    self.hud.draw('Jin','Será que pego ele?','')
+                    self.hud.draw('Jin','Devo pegá-lo?','')
             if self.eventos[1]==4:
                     self.andar=False
-                    self.hud.draw('Jin','Será que pego ele?','')
+                    self.hud.draw('Jin','Devo pegá-lo?','')
                     self.eventos[1] = self.hud.Escolha(4,5,0)
             if self.eventos[1]==5:
                     self.andar=False
-                    self.hud.draw('Jin','Vamos jogar esse cloro.','')
+                    self.hud.draw('Jin','Vamos jogar o cloro na piscina.','')
             if self.eventos[1]==7:
                     self.andar=False
-                    self.hud.draw('Jin','Vou guardar ele de volta.','')
+                    self.hud.draw('Jin','Vou guardar o balde de volta.','')
             if self.eventos[1]==8:
                     self.andar=False
-                    self.hud.draw('Jin','Eu já estou com algo na mão.','')
+                    self.hud.draw('Jin','Já estou com a mão ocupada.','')
 
             if self.eventos[2]==1:
                     self.andar=False
                     self.hud.draw('Jin','Está na hora de limpar essa piscina.','')
             if self.eventos[2]==2:
                     self.andar=False
-                    self.hud.draw('Jin','Agora vai acontecer um minigame onde você vai','Controlar a rede usando o mouse.')
+                    self.hud.draw('Jin','Vai começar um minigame.','Controle o movimento da rede usando o mouse.')
             if self.eventos[2]==3:
                     self.andar=False
-                    self.hud.draw('Jin','O objetivo é coletar o lixo da piscina clicando','No mouse para coletar o lixo.')
+                    self.hud.draw('Jin','O objetivo é coletar o lixo da piscina, clicando','no botão esquerdo do mouse.')
             if self.eventos[2]==5:
                     self.andar=False
-                    self.hud.draw('Jin','Consegui limpar ela.','')
+                    self.hud.draw('Jin','Pronto! Piscina limpa!','')
             if self.eventos[2]==6:
                     self.andar=False
-                    self.hud.draw('Jin','Entro na piscina?','')
+                    self.hud.draw('Jin','Posso entrar na piscina, agora?','')
             if self.eventos[2]==7:
                     self.andar=False
-                    self.hud.draw('Jin','Entro na piscina?','')
+                    self.hud.draw('Jin','Posso entrar na piscina, agora?','')
                     self.eventos[2] = self.hud.Escolha(7,8,0)
             if self.eventos[2]==8:
                     self.andar=False
-                    self.hud.draw('Jin','Bora entrar na piscina.','')
+                    self.hud.draw('Jin','Bora entrar na piscina!','')
             if self.eventos[2]==9:
                     self.andar=False
                     self.hud.draw('Jin','Não posso entrar na piscina com esse item','na mão.')
             if self.eventos[2]==10:
                     self.andar=False
-                    self.hud.draw('Jin','Será que boto cloro na piscina?','')
+                    self.hud.draw('Jin','Devo colocar cloro na piscina?','')
             if self.eventos[2]==11:
                     self.andar=False
-                    self.hud.draw('Jin','Será que boto cloro na piscina?','')
+                    self.hud.draw('Jin','Devo colocar cloro na piscina?','')
                     self.eventos[2] = self.hud.Escolha(11,12,0)
             if self.eventos[2]==12:
                     self.andar=False
-                    self.hud.draw('Jin','Como tem um pouco de cloro aqui na piscina','vai matar os germes.')
+                    self.hud.draw('Jin','Pronto!','O cloro vai matar os germes.')
             if self.eventos[2]==13:
                     self.andar=False
-                    self.hud.draw('Jin','Agora só esperar um tempo para o cloro fazer','efeito.')
+                    self.hud.draw('Jin','Agora é só esperar um tempo para o cloro','fazer efeito.')
             if self.eventos[2]==14:
                     self.andar=False
                     self.hud.escurecer(5)
-                    self.hud.draw('','Algumas horas depois.','')
+                    self.hud.draw('','Algumas horas depois...','')
             if self.eventos[2]==15:
                     self.andar=False
                     self.hud.clarear(5)

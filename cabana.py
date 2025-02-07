@@ -262,13 +262,13 @@ class Cabana:
           
         if self.eventos[0]==1:
                 self.andar=False
-                self.hud.draw('Jin','Esse daqui é um óculos de proteção.','')
+                self.hud.draw('Jin','Isso aqui é um óculos de proteção.','Posso usar para proteger meus olhos')
         if self.eventos[0]==2:
                 self.andar=False
-                self.hud.draw('Jin','Será que boto ele na cara?','')
+                self.hud.draw('Jin','Será que devo colocar?','')
         if self.eventos[0]==3:
                 self.andar=False
-                self.hud.draw('Jin','Será que boto ele na cara?','')
+                self.hud.draw('Jin','Será que devo colocar?','')
                 self.eventos[0] = self.hud.Escolha(3,4,0)
         if self.eventos[0]==4:
                 self.andar=False
@@ -279,39 +279,39 @@ class Cabana:
 
         if self.eventos[1]==1:
                 self.andar=False
-                self.hud.draw('Jin','O cortador de grama é meio velho.','')
+                self.hud.draw('Jin','O cortador de grama é meio antigo.','')
         if self.eventos[1]==2:
                 self.andar=False
-                self.hud.draw('Jin','Eu sei que não é um dos melhores mas','serve para o trabalho.')
+                self.hud.draw('Jin','Está um pouco enferrujado, mas acho que serve','para o trabalho.')
         if self.eventos[1]==3:
                 self.andar=False
-                self.hud.draw('Jin','Será que pego ele?','')
+                self.hud.draw('Jin','Será que devo usá-lo?','')
         if self.eventos[1]==4:
                 self.andar=False
-                self.hud.draw('Jin','Será que pego ele?','')
+                self.hud.draw('Jin','Será que devo usá-lo?','')
                 self.eventos[1] = self.hud.Escolha(4,5,0)
         if self.eventos[1]==5:
                 self.andar=False
-                self.hud.draw('Jin','Vamos cortar essa grama, só não posso esquecer de','onde eu peguei, para guardar ele depois.')
+                self.hud.draw('Jin','Bora cortar essa grama! Não posso esquecer de','trazê-lo de volta depois de usar.')
         if self.eventos[1]==7:
                 self.andar=False
-                self.hud.draw('Jin','Vou guardar ele de volta aqui.','')
+                self.hud.draw('Jin','Agora que terminei,','vou deixá-lo aqui.')
         if self.eventos[1]==8:
                 self.andar=False
-                self.hud.draw('Jin','Eu já estou com algo na mão','')
+                self.hud.draw('Jin','Não consigo pegar, já estou com a mão ocupada','')
 
         if self.eventos[2]==1:
                 self.andar=False
-                self.hud.draw('Jin','Essa dispensa esta bem sujo hein.','')
+                self.hud.draw('Jin','Essa dispensa está bem suja, hein!','')
         if self.eventos[2]==2:
                 self.andar=False
-                self.hud.draw('Jin','E também muito desorganizado, nossa parece','até um labirinto com tantas caixas.')
+                self.hud.draw('Jin','E muito desorganizada. Nossa!! Parece um labirinto','com todas essas caixas!')
         if self.eventos[2]==3:
                 self.andar=False
-                self.hud.draw('Jin','Mal consigo ver nada com essa lâmpada falhando.','')
+                self.hud.draw('Jin','Essa luz está piscando muito.','mal consigo ver o caminho...')
         if self.eventos[2]==4:
                 self.andar=False
-                self.hud.draw('Jin','é melhor pegar logo o cortador de grama e os','óculos de proteção que estão aqui.')
+                self.hud.draw('Jin','Tenho que procurar o cortador de grama','e os óculos de proteção que estão por aqui.')
 
 
     def drawb(self):
